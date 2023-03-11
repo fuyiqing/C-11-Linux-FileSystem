@@ -1,2 +1,3 @@
-基于C++11和Linux 5.x内核的文件系统设计与实现
-Design and implementation of a file system based on C++11 and Linux 5.x kernel.
+这是一个仿linux的虚拟文件系统，系统由一个虚拟磁盘文件承载，以文件读写模拟磁盘读写，不涉及底层驱动。
+
+写一个简单的仿linux文件系统，首先需要设计好包含inode、block、superblock、虚拟磁盘布局，空间分配等信息的基本框架。文件系统的开头是一个superblock，包含系统的重要信息，包括inode和block的数量和大小。对于inode，一般来说需要占磁盘空间的百分之一，不过这是个小系统，总大小才5M多一点，所以分配给inode区的空间很少，剩下的空间大部分是block区。
